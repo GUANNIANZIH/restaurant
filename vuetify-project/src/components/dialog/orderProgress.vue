@@ -49,7 +49,7 @@ const orders = ref([]);
 const orderStatus = ref('pending')
 
 // 初始化 Socket.IO 連接
-const socket = io('http://localhost:4000'); // 確保這個 URL 是您的後端服務器
+const socket = io(import.meta.env.VITE_API); // 確保這個 URL 是您的後端服務器
 
 socket.on('connect', () => {
   console.log('Connected to server');

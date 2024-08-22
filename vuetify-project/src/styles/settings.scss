@@ -1,0 +1,29 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://vuetifyjs.com/features/sass-variables/`
+// @use 'vuetify/settings' with (
+//   $color-pack: false
+// );
+
+// settings.sass 的特點
+// 全局樣式定義：適合設定全局範圍內的樣式變數，影響整個應用的外觀。
+// SASS 語法支持：你可以利用 SASS 的強大功能（如變數、嵌套、繼承等）來管理樣式。
+// 與組件無關：settings.sass 定義的變數不會直接與 Vuetify 組件的主題功能聯繫。
+
+$primary: #2C3E31;
+$secondary: #3C5D44;
+$accent: #D78A24;
+$error: #D66425;
+$light: #FDEACE;
+
+$font-family: 'Roboto', sans-serif;
+$border-radius: 8px;
+
+.button{
+    background-color: $primary;
+    border-radius: $border-radius;
+}

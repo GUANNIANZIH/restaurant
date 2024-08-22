@@ -1,0 +1,9 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+.button {
+  background-color: #2C3E31;
+  border-radius: 8px;
+}

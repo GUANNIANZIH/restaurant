@@ -23,7 +23,7 @@ import { io } from 'socket.io-client'
 export function registerPlugins (app) {
   // socketConnection 設置： 為了更清楚地管理 Socket.IO 的連接
   // 將 io('http://localhost:3000') 提取到變數 socketConnection 中。
-  const socketConnection = io('http://localhost:4000')// 使用伺服器地址
+  const socketConnection = io(import.meta.env.VITE_API)// 使用伺服器地址
 
   app
   // 在 app.use(vuetify) 之後去引用這個套件

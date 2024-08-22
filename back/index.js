@@ -8,7 +8,7 @@ import { StatusCodes } from 'http-status-codes'
 // 防止查詢參數中的操作符注入（即防止某些潛在的安全漏洞 $）
 import mongoSanitize from 'express-mongo-sanitize'
 // 限制別人對伺服器發送請求的次數
-import rateLimit from 'express-rate-limit'
+// import rateLimit from 'express-rate-limit'
 // routes/user.js
 import routeUser from './routes/user.js'
 // 0709/ 01:12:00 引入 routes/product.js

@@ -15,6 +15,7 @@ import { fileURLToPath, URL } from 'node:url'
 // 在路由中加上 Layouts
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     VueRouter(),
     Layouts(),

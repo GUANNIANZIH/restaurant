@@ -62,20 +62,20 @@ app.use((req, res, next) => {
 
 // rateLimit() 是一個 middleware 函式，用來限制別人對伺服器發送請求的次數。
 // 通常放在第一個 middleware 函式，這樣就可以限制所有的請求，超出了就不需要處理。
-app.use(rateLimit({
-  windowMs: 1000 * 60 * 15, // 15 分鐘
-  max: 100, // 100 次
-  standardHeaders: 'draft-7',
-  legacyHeaders: true, // 適用於舊版的 HTTP 標頭
-  StatusCodes: StatusCodes.TOO_MANY_REQUESTS, // 自己設定狀態碼 429
-  message: '請求次數過多，請稍後再試',
-  handler: (req, res, next, options) => { // 處理函式，如何回應訊息
-    res.status(options.statusCode).json({
-      success: false,
-      message: options.message
-    })
-  }
-}))
+// app.use(rateLimit({
+//   windowMs: 1000 * 60 * 15, // 15 分鐘
+//   max: 100, // 100 次
+//   standardHeaders: 'draft-7',
+//   legacyHeaders: true, // 適用於舊版的 HTTP 標頭
+//   StatusCodes: StatusCodes.TOO_MANY_REQUESTS, // 自己設定狀態碼 429
+//   message: '請求次數過多，請稍後再試',
+//   handler: (req, res, next, options) => { // 處理函式，如何回應訊息
+//     res.status(options.statusCode).json({
+//       success: false,
+//       message: options.message
+//     })
+//   }
+// }))
 
 // "註冊" 功能最後一步，設定 CORS，都完成後可以寫 "登入" 功能 0709/00:21:00 (back 建立 passport 資料夾)
 // cors() 是一個 middleware 函式，用來設置跨來源資源共用（CORS）機制。

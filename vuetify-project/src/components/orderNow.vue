@@ -19,7 +19,7 @@
       使用作用域插槽來獲取 v-slide-group-item 的狀態和操作方法 -->
         <v-slide-group-item
             v-for="newsCard in newsCards"
-            :key="newsCard._id"
+            :key="newsCard"
           >
             <newsCard v-bind="newsCard"/>
         </v-slide-group-item>

@@ -9,6 +9,18 @@
     <pre>loadNewsCards</pre>
     <!-- 顯示一組可以滑動的項目，有選擇功能 -->
     <!-- selected-class="bg-success": 被選中時，設置背景顏色 -->
+     <v-row>
+      <v-col
+      v-for="newsCard in newsCards"
+      :key="index"
+      class="d-flex justify-center align-center p-2"
+      cols="12"
+      md="6"
+      lg="4"
+      >
+        <newsCard v-bind="newsCard"/>
+      </v-col>
+     </v-row>
       <v-slide-group
         v-model="model"
         class="pa-4"

@@ -9,19 +9,19 @@
     <pre>loadNewsCards</pre>
     <!-- 顯示一組可以滑動的項目，有選擇功能 -->
     <!-- selected-class="bg-success": 被選中時，設置背景顏色 -->
-    <v-slide-group
-      v-model="model"
-      class="pa-4"
-      show-arrows
-    >
-    <!-- v-for="n in 15": 循環生成 15 個項目 -->
-    <!-- v-slot="{ isSelected, toggle, selectedClass }": 
-    使用作用域插槽來獲取 v-slide-group-item 的狀態和操作方法 -->
-      <v-slide-group-item
-          v-for="newsCard in newsCards"
-          :key="newsCard.id"
-        >
-          <newsCard v-bind="newsCard"/>
+      <v-slide-group
+        v-model="model"
+        class="pa-4"
+        show-arrows
+      >
+      <!-- v-for="n in 15": 循環生成 15 個項目 -->
+      <!-- v-slot="{ isSelected, toggle, selectedClass }": 
+      使用作用域插槽來獲取 v-slide-group-item 的狀態和操作方法 -->
+        <v-slide-group-item
+            v-for="newsCard in newsCards"
+            :key="newsCard.id"
+          >
+            <newsCard v-bind="newsCard"/>
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>

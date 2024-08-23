@@ -5,7 +5,7 @@
     class="mx-auto mb-5 w-100 p-5 text-center"
   >
     <br>
-    <h2 class="text-h5">HOTS | 熱門餐點</h2>
+    <h2 class="text-h5">NEWS | 玉食堂活動</h2>
     <!-- 顯示一組可以滑動的項目，有選擇功能 -->
     <!-- selected-class="bg-success": 被選中時，設置背景顏色 -->
     <v-slide-group

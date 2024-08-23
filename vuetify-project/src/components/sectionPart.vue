@@ -37,20 +37,20 @@
 					rounded="0"
 					width="100%"
 				>
-					<a class="bear-link">
+					<!-- <a class="bear-link">
 						<v-img src="@/assets/logo/logo-web-icon-white.png"></v-img>
-					</a>
+					</a> -->
 
 					<v-row justify="center">
 						<v-col cols="12">
 							<v-sheet class="article" elevation="5">
 								<div class="assets">
-									<img class="forest" src="@/assets/bg/A_repeating_pattern_background_featuring_stag_horn.jpg" alt="forest" />
+									<img cover class="forest" src="@/assets/bg/A_repeating_pattern_background_featuring_stag_horn.jpg" alt="forest" />
 									<h3>玉食堂</h3>
 									<v-btn class="top-btn">
 										<router-link to="/menu" class="top-btn-none-text-decoration">MENU</router-link>
 									</v-btn>
-									<img src="https://assets.codepen.io/605876/osaka-tower.png" alt="restaurant" />
+									<!-- <img src="https://assets.codepen.io/605876/osaka-tower.png" alt="restaurant" /> -->
 								</div>
 
 								<div class="blur">
@@ -134,43 +134,42 @@ background-color: #D78A24;
 
 
 	/* 一般設置 */
-	.bear-link {
-	color: #000;
-	position: relative;
-	top: 10rem;
-	z-index: 1000;
-	// left: 1rem;
-	width: 48px;
-	// display: grid;
-	// place-items: center;
-	opacity: 0.9;
-	}
+	// .bear-link {
+	// color: #000;
+	// position: relative;
+	// z-index: 1000;
+	// // left: 1rem;
+	// // display: grid;
+	// // place-items: center;
+	// opacity: 0.9;
+	// }
 
 	.article {
 	position: relative;
+	height: 100%;
 	width: 100%;
-	top: -4%;
+	top: 0%;
 	// 設置元素的寬高比
 	// 2 / 1.1： 表示寬度是高度的 2 倍，並且高度是寬度的 1.1 分之一
-	aspect-ratio: 2 / 1.2;
+	aspect-ratio: 2 / 1.3;
 	// max-height: calc(100svh - 2rem);
 	overflow: hidden;
 	border-radius: 1.2em;
 	}
 
-	.forest {
-	position: absolute;
+	// .forest {
+	// position: absolute;
 	// top: 0;
 	// left: 50%;
 	// transform: translate(-50%, 0);
-	width: 100%;
-	height: 100%;
-	// width: 660px;
-	object-fit: cover;
-	object-position: center 43%;
-	// user-select: none;
-	// pointer-events: none;
-	}
+	// width: 100%;
+	// height: 100%;
+	// // width: 660px;
+	// object-fit: cover;
+	// // object-position: center 43%;
+	// // user-select: none;
+	// // pointer-events: none;
+	// }
 
 	.assets h3 {
 	position: absolute;

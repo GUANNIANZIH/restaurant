@@ -12,7 +12,7 @@
      <v-row>
       <v-col
       v-for="newsCard in newsCards"
-      :key="index"
+      :key="newsCard._id"
       class="d-flex justify-center align-center p-2"
       cols="12"
       md="6"
@@ -31,7 +31,7 @@
       使用作用域插槽來獲取 v-slide-group-item 的狀態和操作方法 -->
         <v-slide-group-item
             v-for="newsCard in newsCards"
-            :key="index"
+            :key="newsCard._id"
           >
             <newsCard v-bind="newsCard"/>
         </v-slide-group-item>

@@ -68,7 +68,7 @@
   <!-- banner 視差 -->
   <brandConcept />
   <!-- orderNow 裡面放 newsCard -->
-  <orderNow />
+  <news />
   <!-- 消息前往 menu -->
   <sectionPart />
   <!-- 引入 orderProgress 對話框 -->
@@ -83,7 +83,7 @@ import { ref, computed, onMounted } from 'vue'
 // 引入元件
 import brandConcept from '@/components/brandConcept.vue'
 import sectionPart from '@/components/sectionPart.vue';
-import orderNow from '@/components/orderNow.vue'
+import news from '@/components/news.vue'
 // 引入 dialog
 import orderProgress from '@/components/dialog/orderProgress.vue';
 // 引入 stores useDialogStore

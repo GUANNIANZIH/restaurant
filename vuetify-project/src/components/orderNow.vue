@@ -6,6 +6,7 @@
   >
     <br>
     <h2 class="text-h5">NEWS</h2>
+    <pre>loadNewsCards</pre>
     <!-- 顯示一組可以滑動的項目，有選擇功能 -->
     <!-- selected-class="bg-success": 被選中時，設置背景顏色 -->
     <v-slide-group
@@ -20,7 +21,6 @@
           v-for="newsCard in newsCards"
           :key="newsCard.id"
         >
-        <pre>loadNewsCards</pre>
           <newsCard v-bind="newsCard"/>
         </v-slide-group-item>
       </v-slide-group>

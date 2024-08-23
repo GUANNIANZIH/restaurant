@@ -20,6 +20,7 @@
           v-for="newsCard in newsCards"
           :key="newsCard.id"
         >
+        <pre>loadNewsCards</pre>
           <newsCard v-bind="newsCard"/>
         </v-slide-group-item>
       </v-slide-group>

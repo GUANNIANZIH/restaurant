@@ -11,14 +11,14 @@
     <!-- selected-class="bg-success": 被選中時，設置背景顏色 -->
      <v-row>
       <v-col
-      v-for="newsCard in newsCards"
-      :key="newsCard._id"
+      v-for="card in cards"
+      :key="card._id"
       class="d-flex justify-center align-center p-2"
       cols="12"
       md="6"
       lg="4"
       >
-        <newsCard v-bind="newsCard"/>
+        <card v-bind="card"/>
       </v-col>
      </v-row>
       <v-slide-group
@@ -30,10 +30,10 @@
       <!-- v-slot="{ isSelected, toggle, selectedClass }": 
       使用作用域插槽來獲取 v-slide-group-item 的狀態和操作方法 -->
         <v-slide-group-item
-            v-for="newsCard in newsCards"
-            :key="newsCard._id"
+            v-for="card in cards"
+            :key="card._id"
           >
-            <newsCard v-bind="newsCard"/>
+            <card v-bind="card"/>
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>
@@ -44,12 +44,12 @@
 // 取資料要把 API 方法拉進去
 import { useApi } from '@/composables/axios.js'
 import { useSnackbar } from 'vuetify-use-dialog'
-import newsCard from '@/components/card/newsCard.vue';
+import card from '@/components/card/card.vue';
 
 // model 變數，綁定 v-model
 const model = ref('')
 // 消息卡片陣列
-const newsCards = ref([])
+const cards = ref([])
 // 取資料用的 api
 const { api } = useApi();
 // snackbar
@@ -59,7 +59,7 @@ const createSnackbar = useSnackbar()
 const loadNewsCards = async () => {
   try {
     const { data } = await api.get('/news', {})
-    newsCards.value.splice(0, newsCards.value.length, ...data.result.data)
+    cards.value.splice(0, cards.value.length, ...data.result.data)
   } catch (error) {
     console.log(error)
     createSnackbar({

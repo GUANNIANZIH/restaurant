@@ -68,7 +68,7 @@ import { useDisplay } from 'vuetify'
 import { useApi } from '@/composables/axios.js'
 import { useSnackbar } from 'vuetify-use-dialog'
 // 引入各個元件
-import newsCard from '@/components/card/newsCard.vue';
+import newsCard from '@/components/card/card.vue';
 import brandConcept from '@/components/brandConcept.vue';
 import sectionPart from '@/components/sectionPart.vue';
 

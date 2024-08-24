@@ -110,18 +110,18 @@
 
       <!-- 會員預購商品購物車資訊 -->
       <v-tabs-window-item :value="2">
-        <cartSpecialty />
+        <CartSpecialty />
       </v-tabs-window-item>
 
       <!-- 會員訂單資訊 -->
       <v-tabs-window-item :value="3">
         <!-- 把私廚的訂單一併匯入會員訂單資訊 -->
-        <profileOrder_dataTable />
+        <ProfileOrder_DataTable />
       </v-tabs-window-item>
 
       <v-tabs-window-item :value="4">
         <!-- 把私廚的訂單一併匯入會員訂單資訊 -->
-        <profileOrderSpecialty_dataTable />
+        <ProfileOrderSpecialty_DataTable />
       </v-tabs-window-item>
 
     </v-tabs-window>
@@ -144,9 +144,9 @@ import { useSnackbar } from 'vuetify-use-dialog'
 
 // 引用 data-table 的元件
 // 改成只拆 profileOrder_dataTable 出去寫成一個元件
-import profileOrder_dataTable from '@/components/dataTable/profileOrder_dataTable.vue'
-import profileOrderSpecialty_dataTable from '@/components/dataTable/profileOrderSpecialty_dataTable.vue'
-import cartSpecialty from '@/components/card/cartSpecialty.vue'
+import ProfileOrder_DataTable from '@/components/dataTable/profileOrder_dataTable.vue'
+import ProfileOrderSpecialty_DataTable from '@/components/dataTable/profileOrderSpecialty_dataTable.vue'
+import CartSpecialty from '@/components/card/cartSpecialty.vue'
 
 // import { useMemberData } from './useMemberData'; // 假設我們有一個 composable 來獲取會員數據
 

@@ -120,53 +120,6 @@
     </v-tabs-window>
   </v-card>
 
-<!-- 第一版用 v-sheet 包 v-form 的註冊、登入
-Register
-<v-sheet
-    class="pa-4 text-center mx-auto mb-5"
-    elevation="4"
-    max-width="600"
-    rounded="lg"
-    width="100%"
--->
-  <!-- 把下面建立好的欄位 schema 綁上來 v-model-->
-      <!-- <h2>Register | 註冊</h2> -->
-      <!-- 在 form 上面寫當表單送出時，@submit.prevent="submit" -->
-      <!-- isSubmitting 是從 useForm 拉出來的東西，送出時停用 -->
-      <!-- <v-form @submit.prevent="submit" :disabled="isSubmitting">
-        <v-text-field 
-        label="account | 帳號"
-        minlength="6"
-        maxlength="16"
-        counter
-        v-model="account.value.value"
-        :error-messages="account.errorMessage.value"
-        ></v-text-field>
-        <v-text-field 
-        label="password | 密碼" 
-        type="password"
-        minlength="6"
-        maxlength="16"
-        v-model="password.value.value"
-        :error-messages="password.errorMessage.value"
-        counter
-        ></v-text-field>
-        <v-text-field
-        label="phoneNumber | 電話"
-        minlength="10"
-        maxlength="10"
-        counter
-        v-model="phoneNumber.value.value"
-        :error-messages="phoneNumber.errorMessage.value"
-        ></v-text-field> -->
-        <!-- v-btn 有 :loading 的屬性可以用，控制會不會有圓圈 -->
-        <!-- 綁定 isSubmitting 這樣送出時會有轉圈樣子-->
-        <!-- <v-btn type="submit" class="mb-5 w-50" :loading="isSubmitting">Register | 註冊</v-btn>
-        <v-spacer/>
-        <v-btn type="submit" class="mb-5 w-50" :loading="isSubmitting">LINE 帳號註冊</v-btn>
-      </v-form>
-</v-sheet> -->
-
 
 </v-container>
 </template>

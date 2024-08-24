@@ -5,35 +5,18 @@
     class="mx-auto mb-5 w-100 p-5 text-center"
   >
     <br>
-    <h2 class="text-h5">NEWS</h2>
-    <pre>loadNewsCards</pre>
-    <!-- 顯示一組可以滑動的項目，有選擇功能 -->
-    <!-- selected-class="bg-success": 被選中時，設置背景顏色 -->
-     <v-row>
-      <v-col
-      v-for="card in cards"
-      :key="card._id"
-      class="d-flex justify-center align-center p-2"
-      cols="12"
-      md="6"
-      lg="4"
-      >
-        <card v-bind="card"/>
-      </v-col>
-     </v-row>
+    <h2 class="text-h5">玉食堂最新消息</h2>
+
       <v-slide-group
         v-model="model"
         class="pa-4"
         show-arrows
       >
-      <!-- v-for="n in 15": 循環生成 15 個項目 -->
-      <!-- v-slot="{ isSelected, toggle, selectedClass }": 
-      使用作用域插槽來獲取 v-slide-group-item 的狀態和操作方法 -->
         <v-slide-group-item
-            v-for="card in cards"
-            :key="card._id"
+          v-for="item in NewsCardComponents"
+          :key="item._id"
           >
-            <card v-bind="card"/>
+            <NewsCardComponent v-bind="item"/>
         </v-slide-group-item>
       </v-slide-group>
     </v-sheet>
@@ -44,31 +27,32 @@
 // 取資料要把 API 方法拉進去
 import { useApi } from '@/composables/axios.js'
 import { useSnackbar } from 'vuetify-use-dialog'
-import card from '@/components/card/card.vue';
+import NewsCardComponent from '@/components/card/newsCard.vue';
 
 // model 變數，綁定 v-model
 const model = ref('')
 // 消息卡片陣列
-const cards = ref([])
+const NewsCardComponents = ref([])
 // 取資料用的 api
 const { api } = useApi();
 // snackbar
 const createSnackbar = useSnackbar()
 
 // 0717/ 00:32:45 取商品的方法
-const loadNewsCards = async () => {
+const loadNewsCardComponents = async () => {
   try {
     const { data } = await api.get('/news', {})
-    cards.value.splice(0, cards.value.length, ...data.result.data)
+    console.log(data)
+    NewsCardComponents.value.splice(0, NewsCardComponents.value.length, ...data.result.data)
   } catch (error) {
     console.log(error)
     createSnackbar({
-      text: error?.response?.data?.message || '發生錯誤',
+      text: error?.response?.data?.message || '無法載入活動資料',
       snackbarProps: {
-        color: 'red'
+        color: '#D78A24'
       }
     })
   }
 }
-loadNewsCards()
+loadNewsCardComponents()
 </script>

@@ -66,13 +66,12 @@
   </v-container>
 
   <!-- banner 視差 -->
-  <brandConcept />
-  <!-- orderNow 裡面放 newsCard -->
-  <news />
-  <!-- 消息前往 menu -->
-  <sectionPart />
-  <!-- 引入 orderProgress 對話框 -->
-  <!-- <orderProgress /> -->
+  <BrandSection />
+
+  <News />
+
+  <sectionPartComponent />
+
 
 </v-container>
 </template>
@@ -81,11 +80,13 @@
 import { definePage } from 'vue-router/auto'
 import { ref, computed, onMounted } from 'vue'
 // 引入元件
-import brandConcept from '@/components/brandConcept.vue'
-import sectionPart from '@/components/sectionPart.vue';
-import news from '@/components/news.vue'
+import BrandSection from '@/components/brandSection.vue'
+
+// import brandConceptComponent from '@/components/brandConcept.vue'
+import sectionPartComponent from '@/components/sectionPart.vue';
+import News from '@/components/news.vue'
 // 引入 dialog
-import orderProgress from '@/components/dialog/orderProgress.vue';
+// import orderProgress from '@/components/dialog/orderProgress.vue';
 // 引入 stores useDialogStore
 // import { useDialogStore } from '@/stores/dialog.js'
 
@@ -99,9 +100,11 @@ import { Autoplay } from 'swiper/modules'
 import _ from 'lodash'
 
 onMounted(() => {
-AOS.init({
-  once: true
-})
+  console.log('VITE_API:', import.meta.env.VITE_API)
+  
+  AOS.init({
+    once: true
+  })
 })
 
 definePage({

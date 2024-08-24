@@ -41,7 +41,7 @@
         md="6"
         lg="4"
       >
-        <specialtyCard v-bind="specialty" />
+        <SpecialtyCard v-bind="specialty" />
       </v-col>
       <v-col cols="12">
         <v-pagination v-model="page" :length="pages" rounded="circle" @update:model-value="loadProducts" ></v-pagination>
@@ -62,7 +62,7 @@ import { useSnackbar } from 'vuetify-use-dialog'
 // 取資料要把 API 方法拉進去
 import { useApi } from '@/composables/axios.js'
 // Components
-import specialtyCard from '@/components/card/specialtyCard.vue';
+import SpecialtyCard from '@/components/card/specialtyCard.vue';
 
 definePage({
   name: 'Specialty',

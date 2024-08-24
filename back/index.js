@@ -91,7 +91,7 @@ app.use(cors({
     // 如果 origin 是 undefined 或是在允許的清單裡面
     // 0709/00:18:30 ，如果是原本的寫法可以只含部分，但如果寫陣列的話要完全符合才行，像是 'http://localhost:3000')
     if (origin === undefined ||
-    origin.includes('github.io') || origin.includes('http://localhost:3000') || origin.includes('127.0.0.1')
+    origin.includes('github.io') || origin.includes('http://localhost:3000') || origin.includes('127.0.0.1') || origin.includes('http://localhost:4174')
     ) {
       // 允許, 沒有錯誤
       callback(null, true)

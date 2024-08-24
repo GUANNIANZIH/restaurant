@@ -29,16 +29,6 @@
             </v-carousel-item>
         </v-carousel>
 
-        <!-- <v-btn 
-        @click="nextSlide" 
-        color="#3C5D44"
-        class="text-h4"
-        height="50px"
-        variant="text"
-        font-weight="bold"
-        >
-            NEXT
-        </v-btn> -->
     </v-container>
 
     <v-container
@@ -59,17 +49,7 @@
                 class="d-flex justify-center align-center text-center"
                 gradient="to top right, rgba(0,0,0,.5), rgba(255,255,255,.7)"
                 src="@/assets/banner/大banner-1.png">
-                <!-- prepend-icon="mdi-chevron-left" -->
-                    <!-- <v-btn
-                    to="/menu"
-                    class="text-h4"
-                    height="50px"
-                    variant="text"
-                    color="white"
-                    font-weight="bold"
-                    >
-                        Order Now
-                    </v-btn> -->
+
                 </v-img>
             </v-sheet>
         </v-sheet>

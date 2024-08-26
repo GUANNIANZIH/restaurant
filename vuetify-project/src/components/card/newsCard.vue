@@ -29,13 +29,14 @@
         </v-card-text>
 
         <v-card-actions class="d-flex justify-center primary-color">
-        <v-btn color="white" text="Explore" @click="explore"></v-btn>
+            <v-btn color="white" text="Explore" @click="explore"></v-btn>
         </v-card-actions>
     </v-card>
 </template>
 
 <script setup>
     import { ref } from 'vue'
+    import { useRouter } from 'vue-router';
 
     defineProps({
         _id: {
@@ -72,6 +73,8 @@
   const show = ref(false)
   const loading = ref(false)
   const selection = ref(1)
+  const router = useRouter()
+  
 
   // 定義方法
   const explore = () => {

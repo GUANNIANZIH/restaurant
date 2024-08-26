@@ -6,7 +6,7 @@
         <!-- 使用 v-parallax 視差效果 -->
         <v-parallax 
         height="600" 
-        src="@/assets/card-products/飲品新上市.png" 
+        src="@/assets/banner/會員推廣_banner.png"
         alt="會員專區 Banner" 
         class="banner">
       </v-parallax>

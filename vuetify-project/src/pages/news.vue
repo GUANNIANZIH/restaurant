@@ -4,7 +4,7 @@
     <v-carousel
     height>
       <v-carousel-item
-        src="@/assets/banner/member.png"
+        src="@/assets/banner/qwiyeo聯名.png"
         cover
       ></v-carousel-item>
 
@@ -13,18 +13,15 @@
       ></v-carousel-item>
 
       <v-carousel-item
-        src="@/assets/banner/member02.png"
+        src="@/assets/banner/member.png"
         cover
       ></v-carousel-item>
 
       <v-carousel-item
-        src="@/assets/banner/大banner-design00.png"
+        src="@/assets/banner/海鮮湯麵-02.png"
         cover
       ></v-carousel-item>
     </v-carousel>
-
-    <!-- banner 視差 -->
-    <BrandSection />
 
     <!-- 消息連結區 -->
     <v-sheet

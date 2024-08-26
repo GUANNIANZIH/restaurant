@@ -60,10 +60,10 @@
 import { ref } from 'vue';
 
 const slides = ref([
-  { url: new URL('@/assets/banner/大banner-design00.png', import.meta.url).href, title: '經典海鮮湯麵', subtitle: 'Classic Seafood Noodle Soup' },
-  { url: new URL('@/assets/banner/大banner-design02.png', import.meta.url).href },
-  { url: new URL('@/assets/banner/大banner-design00.png', import.meta.url).href, title: '懷念的好滋味', subtitle: 'A Nostalgic Good Taste' },
-  { url: new URL('@/assets/banner/大banner-design02.png', import.meta.url).href },
+  { url: new URL('@/assets/banner/海鮮湯麵-02.png', import.meta.url).href, title: '經典海鮮湯麵', subtitle: 'Classic Seafood Noodle Soup' },
+  { url: new URL('@/assets/banner/海鮮湯麵-01.png', import.meta.url).href },
+  { url: new URL('@/assets/banner/海鮮湯麵-02.png', import.meta.url).href, title: '懷念的好滋味', subtitle: 'A Nostalgic Good Taste' },
+  { url: new URL('@/assets/banner/海鮮湯麵-01.png', import.meta.url).href },
 ]);
 
 const arrowIcon = ref('mdi-chevron-right');

@@ -7,19 +7,19 @@
         src="@/assets/banner/qwiyeo聯名.png"
         cover
       ></v-carousel-item>
-
+      
       <v-carousel-item
-      src="@/assets/banner/大banner-design02.png"
+        src="@/assets/banner/會員推廣_banner2.png"
+        cover
       ></v-carousel-item>
-
+      
       <v-carousel-item
         src="@/assets/banner/member.png"
         cover
       ></v-carousel-item>
 
       <v-carousel-item
-        src="@/assets/banner/海鮮湯麵-02.png"
-        cover
+      src="@/assets/banner/member02.png"
       ></v-carousel-item>
     </v-carousel>
 
